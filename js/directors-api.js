@@ -3,7 +3,7 @@ define(['base-api', 'Fuse'], function (BaseApi, Fuse) {
         static #_directors = null;
         static async directors() {
             if (Api.#_directors === null) {
-                Api.#_directors = await fetch('/actor-details/js/directors.json').then(response => response.json()).then(data=>data)
+                Api.#_directors = await fetch('./js/directors.json').then(response => response.json()).then(data=>data)
             }
             return Api.#_directors
         }
